@@ -1,5 +1,7 @@
 package com.example.tastyappclone.view.fragment
 
+
+import android.net.Network
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -7,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.tastyappclone.R
@@ -18,7 +21,10 @@ import com.example.tastyappclone.data.model.DataDTO
 import com.example.tastyappclone.data.model.Kids.DataDtO
 import com.example.tastyappclone.data.model.Popular.PopularDataDTO
 import com.example.tastyappclone.data.model.Thriller.ThrillerDataDTO
+import com.example.tastyappclone.data.remoteDatabase.Netw
+import com.example.tastyappclone.data.remoteDatabase.TastyService
 import com.example.tastyappclone.reposirity.TastyReposirity
+import com.example.tastyappclone.viewModel.MainTastyAppViewModel
 import com.example.tastyappclone.viewModel.TastyAppViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -40,11 +46,19 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+        return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val apiClient:TastyService = Netw.getResponse().create(TastyService::class.java)
+        tastyResposirity = TastyReposirity(apiClient)
+        tastyAppViewModel1 = ViewModelProvider(this, MainTastyAppViewModel(tastyResposirity)).get(TastyAppViewModel::class.java)
+        super.onViewCreated(view, savedInstanceState)
         TopMoviesbuildData()
         KidsSMoviesbuildData()
         PopularMoviesbuildData()
         ThrillerMoviesbuildData()
-        return inflater.inflate(R.layout.fragment_home, container, false)
     }
     private fun ThrillerMoviesbuildData() {
         tastyAppViewModel1.thrillerData.observe(viewLifecycleOwner, Observer {

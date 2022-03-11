@@ -1,7 +1,6 @@
 package com.example.tastyappclone.adapter
 
 
-import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tastyappclone.R
@@ -14,7 +13,7 @@ import kotlinx.android.synthetic.main.tasty_item_layout.view.*
 class TastyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun setData(data: DataDTO) {
          var index:Int = 0
-        Picasso.get().load(data.image).placeholder(R.drawable.img).into(itemView.image)
+        Picasso.get().load(data.image).placeholder(R.drawable.bannerimage1).into(itemView.image)
        //  Glide.with(itemView.image2.context).load(data.image.toString()).into(itemView.image2)
         if(data!= null) {
             itemView.textView2.text =data.movieName.toString()
