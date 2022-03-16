@@ -3,23 +3,21 @@ package com.example.tastyappclone.adapter
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tastyappclone.OnItemClickListener3
 import com.example.tastyappclone.R
 import com.example.tastyappclone.data.model.Popular.PopularDataDTO
 
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.action_item_layout.view.*
 
-class PopularViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+class PopularViewHolder(itemView: View, var onItemClickListener3: OnItemClickListener3) : RecyclerView.ViewHolder(itemView) {
     fun setData(data: PopularDataDTO) {
         Picasso.get().load(data.image).placeholder(R.drawable.bannerimage1).into(itemView.image2)
-        //  Glide.with(itemView.image2.context).load(data.image.toString()).into(itemView.image2)
-        /*if(data.movieName.toString()!= null) {
-            Log.d("Mausam",data.movieName.toString())
-            itemView.textView4.text = data.movieName.toString()
-
+        itemView.action_item_layout.setOnClickListener {
+            onItemClickListener3.onItemClick3(data.image.toString(), data.movieName.toString(), data.description.toString(), data.year.toString()
+                , data.movieTrailerLink.toString(), data.rating.toString(), data.directorImage.toString())
         }
-        else{
-            itemView.textView4.text = "Mausam"
-        }*/
+
     }
-}
+    }

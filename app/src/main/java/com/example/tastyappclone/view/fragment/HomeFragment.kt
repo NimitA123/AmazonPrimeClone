@@ -6,12 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.tastyappclone.MovieDetails
-import com.example.tastyappclone.OnItemClickListener
-import com.example.tastyappclone.R
+import com.example.tastyappclone.*
 import com.example.tastyappclone.adapter.KidsAdapter
 import com.example.tastyappclone.adapter.PopularAdapter
 import com.example.tastyappclone.adapter.TastyAdapter
@@ -29,7 +28,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 
 
-class HomeFragment : Fragment(), OnItemClickListener{
+class HomeFragment : Fragment(), OnItemClickListener, OnItemClickListener1, OnItemClickListener2, OnItemClickListener3{
     private var arrayList = arrayListOf<DataDTO>()
     private var arrayList1 = mutableListOf<DataDtO>()
     private var arrayList2 = arrayListOf<PopularDataDTO>()
@@ -41,6 +40,9 @@ class HomeFragment : Fragment(), OnItemClickListener{
     private lateinit var popularAdapter: PopularAdapter
     private lateinit var thrillerAdapter: ThrillerAdapter
     private lateinit var onItemClickListener: OnItemClickListener
+    private lateinit var onItemClickListener1: OnItemClickListener1
+    private lateinit var onItemClickListener2:OnItemClickListener2
+    private var img = listOf<Int>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -51,11 +53,13 @@ class HomeFragment : Fragment(), OnItemClickListener{
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        buildSliderData()
         val apiClient:TastyService = Netw.getResponse().create(TastyService::class.java)
         tastyResposirity = TastyReposirity(apiClient)
         tastyAppViewModel1 = ViewModelProvider(this, MainTastyAppViewModel(tastyResposirity)).get(TastyAppViewModel::class.java)
 
         super.onViewCreated(view, savedInstanceState)
+
         TopMoviesbuildData()
         KidsSMoviesbuildData()
         PopularMoviesbuildData()
@@ -71,7 +75,7 @@ class HomeFragment : Fragment(), OnItemClickListener{
     }
 
     private fun setAdapter3() {
-        thrillerAdapter = ThrillerAdapter(arrayList3,)
+        thrillerAdapter = ThrillerAdapter(arrayList3,this)
         val gridLayoutManager = GridLayoutManager(context,  1, GridLayoutManager.HORIZONTAL, true)
         rvRecyclerView3.adapter = thrillerAdapter
         rvRecyclerView3.layoutManager = gridLayoutManager
@@ -87,7 +91,7 @@ class HomeFragment : Fragment(), OnItemClickListener{
     }
 
     private fun setAdapter2() {
-        popularAdapter = PopularAdapter(arrayList2)
+        popularAdapter = PopularAdapter(arrayList2, this)
         val gridLayoutManager = GridLayoutManager(context,  1, GridLayoutManager.HORIZONTAL, true)
         rvRecyclerView2.adapter = popularAdapter
         rvRecyclerView2.layoutManager = gridLayoutManager
@@ -132,7 +136,7 @@ class HomeFragment : Fragment(), OnItemClickListener{
 
     //This function is responsible for setting data into the adapter class
     private fun setAdapter() {
-        adapter = TastyAdapter(arrayList)
+        adapter = TastyAdapter(arrayList, this)
         val gridLayoutManager = GridLayoutManager(context,  1, GridLayoutManager.HORIZONTAL, true)
         rvRecyclerView.adapter = adapter
         rvRecyclerView.layoutManager = gridLayoutManager
@@ -150,6 +154,87 @@ class HomeFragment : Fragment(), OnItemClickListener{
         Log.d("Mausam", moviesVideo)
         intent.putExtra("rating", rating)
         intent.putExtra("directorImage", directorImage)
+        startActivity(intent)
+    }
+    private fun buildSliderData() {
+        img = listOf<Int>(R.drawable.bannerimage1, R.drawable.img_1, R.drawable.pushpa, R.drawable.img_2)
+        for(i in 0..img.size-1){
+            showImage(img[i])
+        }
+    }
+
+    private fun showImage(i: Int) {
+        var imageView = ImageView(context)
+        imageView.setBackgroundResource(i)
+        viewFlipper.addView(imageView)
+        viewFlipper.flipInterval = 3000
+        viewFlipper.isAutoStart = true
+        viewFlipper.setInAnimation(context, android.R.anim.slide_in_left)
+        viewFlipper.setOutAnimation(context, android.R.anim.slide_out_right)
+
+
+    }
+
+    override fun onItemClick1(
+        image: String,
+        moviesName: String,
+        MoviesDescription: String,
+        year: String,
+        moviesVideo: String,
+        rating: String,
+        Director: String
+    ) {
+        var intent = Intent(activity, TopMovieDetails::class.java)
+        intent.putExtra("image", image)
+        intent.putExtra("moviesName", moviesName)
+        intent.putExtra("MoviesDescription", MoviesDescription)
+        intent.putExtra("Year", year)
+        intent.putExtra("MovieVideo", "https://www.youtube.com/watch?v="+moviesVideo)
+        Log.d("Mausam", moviesVideo)
+        intent.putExtra("rating", rating)
+        intent.putExtra("directorImage", Director)
+        startActivity(intent)
+    }
+
+    override fun onItemClick2(
+        image: String,
+        moviesName: String,
+        MoviesDescription: String,
+        year: String,
+        moviesVideo: String,
+        rating: String,
+        Director: String
+    ) {
+        var intent = Intent(activity, ThrillerMovieDetails::class.java)
+        intent.putExtra("image", image)
+        intent.putExtra("moviesName", moviesName)
+        intent.putExtra("MoviesDescription", MoviesDescription)
+        intent.putExtra("Year", year)
+        intent.putExtra("MovieVideo", "https://www.youtube.com/watch?v="+moviesVideo)
+        Log.d("Mausam", moviesVideo)
+        intent.putExtra("rating", rating)
+        intent.putExtra("directorImage", Director)
+        startActivity(intent)
+    }
+
+    override fun onItemClick3(
+        image: String,
+        moviesName: String,
+        MoviesDescription: String,
+        year: String,
+        moviesVideo: String,
+        rating: String,
+        Director: String
+    ) {
+        var intent = Intent(activity, ActionMovieDetails::class.java)
+        intent.putExtra("image", image)
+        intent.putExtra("moviesName", moviesName)
+        intent.putExtra("MoviesDescription", MoviesDescription)
+        intent.putExtra("Year", year)
+        intent.putExtra("MovieVideo", "https://www.youtube.com/watch?v="+moviesVideo)
+        Log.d("Mausam", moviesVideo)
+        intent.putExtra("rating", rating)
+        intent.putExtra("directorImage", Director)
         startActivity(intent)
     }
 

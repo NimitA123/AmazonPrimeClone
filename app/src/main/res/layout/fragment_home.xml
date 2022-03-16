@@ -3,21 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".view.fragment.HomeFragment">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-    android:background="#37475A"
+    android:background="#232f3e"
     android:orientation = "vertical">
 
-
-
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id = "@+id/viewFlipper"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "Top Movies"
+        android:layout_marginTop="2dp"
         android:textColor="@color/white"
         android:textSize="22sp"
         />

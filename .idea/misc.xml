@@ -10,16 +10,19 @@
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/drawable/play_button.xml" value="0.1095" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/drawable/selector.xml" value="0.1" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/action_item_layout.xml" value="0.15942028985507245" />
+        <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_action_movie_details.xml" value="0.1" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_main2.xml" value="0.1875" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_movie_details.xml" value="0.21" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_movie_video.xml" value="0.1" />
+        <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_thriller_movie_details.xml" value="0.1" />
+        <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/activity_top_movie_details.xml" value="0.1" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/banner_viewpager_item_layout.xml" value="0.1" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_channels.xml" value="0.12395833333333334" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_download.xml" value="0.1" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_f_ind.xml" value="0.12395833333333334" />
-        <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_home.xml" value="0.12" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_movie_video.xml" value="0.1" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/fragment_my_stuff.xml" value="0.12395833333333334" />
         <entry key="..\:/Users/pcs/AndroidStudioProjects/TastyAppClone/app/src/main/res/layout/kids_item_layout.xml" value="0.15942028985507245" />

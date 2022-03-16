@@ -6,6 +6,7 @@
     app:cardCornerRadius="15dp"
     android:backgroundTint="@color/white"
     android:layout_margin="5dp"
+    android:id = "@+id/tasty_item_layout"
     android:orientation="vertical">
 
     <ImageView

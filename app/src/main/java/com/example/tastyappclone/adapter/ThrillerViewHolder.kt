@@ -2,21 +2,20 @@ package com.example.tastyappclone.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tastyappclone.OnItemClickListener2
 import com.example.tastyappclone.R
 import com.example.tastyappclone.data.model.Thriller.ThrillerDataDTO
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.tasty_item_layout.view.*
 import kotlinx.android.synthetic.main.triller_item_layout.view.*
 
-class ThrillerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ThrillerViewHolder(itemView: View, var onItemClickListener2: OnItemClickListener2) : RecyclerView.ViewHolder(itemView) {
     fun setData(data: ThrillerDataDTO) {
         Picasso.get().load(data.image).placeholder(R.drawable.bannerimage1).into(itemView.image4)
-        //  Glide.with(itemView.image2.context).load(data.image.toString()).into(itemView.image2)
-      /*  if(data!= null) {
-            itemView.textView4.text = data.name.toString()
-
+        itemView.thriller_item_layout.setOnClickListener {
+            onItemClickListener2.onItemClick2(data.image.toString(), data.name.toString(), data.description.toString(), data.year.toString()
+                , data.movieTrailerLink.toString(), data.rating.toString(), data.directorImage.toString())
         }
-        else{
-            itemView.textView4.text = "Mausam"
-        }*/
+
     }
 }

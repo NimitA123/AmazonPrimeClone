@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
     private var bannerList = arrayListOf<bannerViewPagerMovieModel>()
     private lateinit var adapter: MoviePagerAdapter
     lateinit var bannerViewPager:ViewPager
-    private var img = listOf<Int>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
        // bannerViewPager = findViewById(R.id.bannerViewPager)
-        buildSliderData()
+
 
 
 
@@ -85,24 +85,7 @@ class MainActivity : AppCompatActivity() {
 
     }*/
 
-    private fun buildSliderData() {
-        img = listOf<Int>(R.drawable.bannerimage1, R.drawable.img_1, R.drawable.pushpa, R.drawable.img_2)
-        for(i in 0..img.size-1){
-           showImage(img[i])
-        }
-    }
 
-    private fun showImage(i: Int) {
-        var imageView = ImageView(this)
-        imageView.setBackgroundResource(i)
-        viewFlipper.addView(imageView)
-        viewFlipper.flipInterval = 3000
-        viewFlipper.isAutoStart = true
-        viewFlipper.setInAnimation(this, android.R.anim.slide_in_left)
-        viewFlipper.setOutAnimation(this, android.R.anim.slide_out_right)
-
-
-    }
 
 
 }
