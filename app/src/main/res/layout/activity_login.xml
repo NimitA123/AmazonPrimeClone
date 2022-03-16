@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".LoginActivity">
-  <!--  <ImageView
+    tools:context=".view.LoginActivity">
+ <ImageView
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:scaleType="fitXY"
@@ -32,12 +32,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text"
-        android:layout_marginLeft="10"
-        android:layout_marginTop="10"
-        android:layout_marginRight="10"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/loginbox"
         android:hint="Email Amazon"
         android:padding="15dp"
+        android:textColor="@color/white"
         android:textColorHint="#FFFFFF" />
     <EditText
         android:layout_width="match_parent"
@@ -45,6 +46,7 @@
         android:layout_below="@id/amazonEmail"
         android:hint = "Password Amazon"
         android:padding="15dp"
+        android:textColor="@color/white"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/loginbox"
@@ -89,6 +91,6 @@
         android:text = "Create a new Amazon Account"
         android:layout_below="@id/NewAmazonText"
         android:layout_margin="10dp"
-        android:padding="20dp"/>-->
+        android:padding="20dp"/>
 
 </RelativeLayout>

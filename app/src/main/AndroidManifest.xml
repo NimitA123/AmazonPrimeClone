@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TastyAppClone">
         <activity
+            android:name=".view.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ThrillerMovieDetails"
             android:exported="false" />
         <activity
@@ -24,7 +27,7 @@
             android:name=".MovieVideo"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.MainActivity"
             android:exported="false" />
         <activity
             android:name=".MovieDetails"
@@ -39,7 +42,7 @@
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.fragment.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
