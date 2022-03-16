@@ -15,13 +15,14 @@ class TastyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
          var index:Int = 0
         Picasso.get().load(data.image).placeholder(R.drawable.bannerimage1).into(itemView.image)
        //  Glide.with(itemView.image2.context).load(data.image.toString()).into(itemView.image2)
-        if(data!= null) {
+      /*  if(data!= null) {
             itemView.textView2.text =data.movieName.toString()
 
         }
         else{
             itemView.textView2.text = "Mausam"
-        }
+        }*/
+
     }
 }
 

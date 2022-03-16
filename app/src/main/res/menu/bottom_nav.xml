@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <item
     android:id="@+id/home"
     android:icon="@drawable/ic_baseline_home_24"
-    android:title="Home"/>
+    android:iconTint="@color/teal_200"
+
+    android:title="Home"
+    app:showAsAction="always" />
     <item
         android:id="@+id/Channels"
         android:icon="@drawable/ic_baseline_channel"
+        android:iconTint="@color/teal_200"
+         app:showAsAction="always"
         android:title="Channels"/>
     <item
         android:id="@+id/Find"
         android:icon="@drawable/ic_baseline_search_24"
+        android:iconTint="@color/teal_200"
+        app:showAsAction="always"
+        android:visible="true"
         android:title="Find"/>
     <item
      android:id="@+id/Download"
         android:icon="@drawable/ic_baseline_arrow_downward_24"
+        android:iconTint="@color/teal_200"
+        android:visible="true"
+        app:showAsAction="always"
      android:title="Downlaod"/>
     <item
-    android:id="@+id/MyStuff"
-    android:icon="@drawable/ic_baseline_account_circle_24"
+         android:id="@+id/MyStuff"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:iconTint="@color/teal_200"
+        android:visible="true"
+        app:showAsAction="always"
     android:title="My Stuff"/>
 
 

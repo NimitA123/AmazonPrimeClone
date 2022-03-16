@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TastyAppClone">
         <activity
+            android:name=".MovieVideo"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MovieDetails"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity4"
             android:exported="false" />
         <activity

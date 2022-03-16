@@ -10,7 +10,6 @@ import com.example.tastyappclone.data.model.bannerMovie.bannerViewPagerMovieMode
 import com.example.tastyappclone.view.fragment.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -87,7 +86,7 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     private fun buildSliderData() {
-        img = listOf<Int>(R.drawable.bannerimage1, R.drawable.img_1, R.drawable.img, R.drawable.img_2)
+        img = listOf<Int>(R.drawable.bannerimage1, R.drawable.img_1, R.drawable.pushpa, R.drawable.img_2)
         for(i in 0..img.size-1){
            showImage(img[i])
         }

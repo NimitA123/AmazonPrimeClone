@@ -11,12 +11,12 @@ class ThrillerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun setData(data: ThrillerDataDTO) {
         Picasso.get().load(data.image).placeholder(R.drawable.bannerimage1).into(itemView.image4)
         //  Glide.with(itemView.image2.context).load(data.image.toString()).into(itemView.image2)
-        if(data!= null) {
+      /*  if(data!= null) {
             itemView.textView4.text = data.name.toString()
 
         }
         else{
             itemView.textView4.text = "Mausam"
-        }
+        }*/
     }
 }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".LoginActivity">
+  <!--  <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:src = "@drawable/amazon_dark_logo_black_and_white"
+        android:layout_marginTop="40dp"
+        android:id = "@+id/LoginLogo"
+/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text = "Sign-In"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:id = "@+id/text"
+        android:layout_below="@id/LoginLogo"
+        android:layout_marginLeft="10dp"
+        />
+
+    <EditText
+        android:id="@+id/amazonEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginLeft="10"
+        android:layout_marginTop="10"
+        android:layout_marginRight="10"
+        android:background="@drawable/loginbox"
+        android:hint="Email Amazon"
+        android:padding="15dp"
+        android:textColorHint="#FFFFFF" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amazonEmail"
+        android:hint = "Password Amazon"
+        android:padding="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/loginbox"
+        android:textColorHint="#FFFFFF"
+        android:id = "@+id/amazonPassword"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amazonPassword"
+        android:text = "Sign-In"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:background="#CEFFB300"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id = "@+id/SignInButton"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "By Continuing, you agree the Amazon's Conditions of Use and Privacy Notice."
+        android:layout_below="@id/SignInButton"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:id = "@+id/termCondition"
+        android:layout_marginRight="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "New to Amazon?"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/termCondition"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:id = "@+id/NewAmazonText"
+        android:textColor="#ADD8E6"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Create a new Amazon Account"
+        android:layout_below="@id/NewAmazonText"
+        android:layout_margin="10dp"
+        android:padding="20dp"/>-->
+
+</RelativeLayout>

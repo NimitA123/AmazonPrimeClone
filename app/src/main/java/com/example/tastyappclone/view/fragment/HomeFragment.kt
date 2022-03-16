@@ -1,7 +1,5 @@
 package com.example.tastyappclone.view.fragment
-
-
-import android.net.Network
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,8 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.tastyappclone.MovieDetails
+import com.example.tastyappclone.OnItemClickListener
 import com.example.tastyappclone.R
 import com.example.tastyappclone.adapter.KidsAdapter
 import com.example.tastyappclone.adapter.PopularAdapter
@@ -30,7 +29,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnItemClickListener{
     private var arrayList = arrayListOf<DataDTO>()
     private var arrayList1 = mutableListOf<DataDtO>()
     private var arrayList2 = arrayListOf<PopularDataDTO>()
@@ -41,6 +40,7 @@ class HomeFragment : Fragment() {
     private lateinit var kidsAdapter: KidsAdapter
     private lateinit var popularAdapter: PopularAdapter
     private lateinit var thrillerAdapter: ThrillerAdapter
+    private lateinit var onItemClickListener: OnItemClickListener
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,6 +54,7 @@ class HomeFragment : Fragment() {
         val apiClient:TastyService = Netw.getResponse().create(TastyService::class.java)
         tastyResposirity = TastyReposirity(apiClient)
         tastyAppViewModel1 = ViewModelProvider(this, MainTastyAppViewModel(tastyResposirity)).get(TastyAppViewModel::class.java)
+
         super.onViewCreated(view, savedInstanceState)
         TopMoviesbuildData()
         KidsSMoviesbuildData()
@@ -70,7 +71,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setAdapter3() {
-        thrillerAdapter = ThrillerAdapter(arrayList3)
+        thrillerAdapter = ThrillerAdapter(arrayList3,)
         val gridLayoutManager = GridLayoutManager(context,  1, GridLayoutManager.HORIZONTAL, true)
         rvRecyclerView3.adapter = thrillerAdapter
         rvRecyclerView3.layoutManager = gridLayoutManager
@@ -122,7 +123,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setAdapter1() {
-        kidsAdapter= KidsAdapter(arrayList1)
+        kidsAdapter= KidsAdapter(arrayList1, this)
         val gridLayoutManager = GridLayoutManager(context,  1, GridLayoutManager.HORIZONTAL, true)
         rvRecyclerView1.adapter = kidsAdapter
         rvRecyclerView1.layoutManager = gridLayoutManager
@@ -139,5 +140,18 @@ class HomeFragment : Fragment() {
 
     }
 
+    override fun onItemClick(image: String, moviesName: String, MoviesDescription: String, Year:String, moviesVideo:String, rating:String, directorImage:String) {
+       var intent = Intent(activity, MovieDetails::class.java)
+        intent.putExtra("image", image)
+        intent.putExtra("moviesName", moviesName)
+        intent.putExtra("MoviesDescription", MoviesDescription)
+        intent.putExtra("Year", Year)
+        intent.putExtra("MovieVideo", "https://www.youtube.com/watch?v="+moviesVideo)
+        Log.d("Mausam", moviesVideo)
+        intent.putExtra("rating", rating)
+        intent.putExtra("directorImage", directorImage)
+        startActivity(intent)
     }
+
+}
 
