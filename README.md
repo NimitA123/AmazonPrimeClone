@@ -45,3 +45,8 @@ Android Studio| Kotlin | Retrofit | Live Data | Coroutine | MVVM Pattern | ViewP
    <img src="https://user-images.githubusercontent.com/86598310/160301483-b6a52d8f-bdf2-40d6-a216-128968e15447.jpeg"  width = "200" />  
   </p>
 
+## Video of the App
+
+
+https://user-images.githubusercontent.com/86598310/160302041-f85e9493-e07d-4068-8adc-1a5647fc3e89.mp4
+
