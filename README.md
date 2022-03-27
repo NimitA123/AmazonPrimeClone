@@ -37,3 +37,9 @@ Android Studio| Kotlin | Retrofit | Live Data | Coroutine | MVVM Pattern | ViewP
     
  ## Screen Shot of the App
  
+![WhatsApp Image 2022-03-28 at 2 41 24 AM](https://user-images.githubusercontent.com/86598310/160301460-dfe3eb98-7bea-4eb5-a5dd-88f95209900e.jpeg)
+![WhatsApp Image 2022-03-28 at 2 41 23 AM (4)](https://user-images.githubusercontent.com/86598310/160301462-60e48bb7-5156-4380-a3d5-171d46bfbd2d.jpeg)
+![WhatsApp Image 2022-03-28 at 2 41 23 AM (3)](https://user-images.githubusercontent.com/86598310/160301466-ef2fb44c-9da1-4fd9-9101-6f09999c7955.jpeg)
+![WhatsApp Image 2022-03-28 at 2 41 23 AM (2)](https://user-images.githubusercontent.com/86598310/160301471-229a5447-c1d5-4ba1-a293-1ef3e3aa1db8.jpeg)
+![WhatsApp Image 2022-03-28 at 2 41 23 AM (1)](https://user-images.githubusercontent.com/86598310/160301477-06829f8c-37ee-4025-93fa-cbca7c4d950c.jpeg)
+![WhatsApp Image 2022-03-28 at 2 41 23 AM](https://user-images.githubusercontent.com/86598310/160301483-b6a52d8f-bdf2-40d6-a216-128968e15447.jpeg)
